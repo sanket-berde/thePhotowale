@@ -1,0 +1,909 @@
+<html>
+    <head>
+        <title>thePhotowale</title>
+		<link rel="shortcut icon" href="img/favicon.ico" />
+		
+		<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+                <script>
+                    window.fbAsyncInit = function() {
+                      FB.init({
+                        appId      : '435684009949835',
+                        xfbml      : true,
+                        version    : 'v2.4'
+                      });
+                    };
+
+                    (function(d, s, id){
+                       var js, fjs = d.getElementsByTagName(s)[0];
+                       if (d.getElementById(id)) {return;}
+                       js = d.createElement(s); js.id = id;
+                       js.src = "//connect.facebook.net/en_US/sdk.js";
+                       fjs.parentNode.insertBefore(js, fjs);
+                     }(document, 'script', 'facebook-jssdk'));
+                </script>
+        <link rel="stylesheet" type="text/css" href="css/the-photowale.css">
+		<link rel="stylesheet" type="text/css" href="css/pictonic.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script src="js/slider.js" type="text/javascript" ></script>
+		<!-- Imports required css and js files for 3 slider-->
+		<link rel="stylesheet" type="text/css" href="load/skin_classic_white.css"/>
+		<link rel="stylesheet" type="text/css" href="skin_classic_white/page.css"/>
+		
+		<script type="text/javascript" src="skin_classic_white/FWDPage.js"></script>
+		<script type="text/javascript" src="java/FWDSimple3DCoverflow.js"></script>
+		<!-- Setup the coverflow (all settings are explained in detail in the documentation files) -->
+		<script type="text/javascript">
+			var coverflow;
+
+			FWDS3DCovUtils.onReady(function(){
+				if(window.top != window){
+					top.location.href = 'index.html';
+				}else{
+					init();
+				}
+			});
+			
+			function setupCoverflow(){
+				coverflow = new FWDSimple3DCoverflow(
+				{
+					//required settings
+					coverflowHolderDivId:"myDiv",
+					coverflowDataListDivId:"playList1",
+					displayType:"fluidwidth",
+					autoScale:"no",
+					coverflowWidth:822,
+					coverflowHeight:470,
+					skinPath:"load/skin_white",
+												
+					//main settings
+					backgroundColor:"#000000",
+					backgroundImagePath:"",
+					backgroundRepeat:"repeat-x",
+					showDisplay2DAlways:"no",
+					coverflowStartPosition:"center",
+					coverflowTopology:"dualsided",
+					coverflowXRotation:0,
+					coverflowYRotation:0,
+					numberOfThumbnailsToDisplayLeftAndRight:3,
+					infiniteLoop:"yes",
+					rightClickContextMenu:"default",
+												
+					//thumbnail settings
+					thumbnailWidth:500,
+					thumbnailHeight:334,
+					thumbnailXOffset3D:86,
+					thumbnailXSpace3D:78,
+					thumbnailZOffset3D:200,
+					thumbnailZSpace3D:93,
+					thumbnailYAngle3D:70,
+					thumbnailXOffset2D:20,
+					thumbnailXSpace2D:30,
+					thumbnailHoverOffset:100,
+					thumbnailBorderSize:0,
+					thumbnailBackgroundColor:"#FFFFFF",
+					thumbnailBorderColor1:"#FFFFFF",
+					thumbnailBorderColor2:"#FFFFFF",
+					transparentImages:"no",
+					thumbnailsAlignment:"center",
+					maxNumberOfThumbnailsOnMobile:7,
+					showThumbnailsGradient:"yes",
+					thumbnailGradientColor1:"rgba(0, 0, 0, 0)",
+					thumbnailGradientColor2:"rgba(0, 0, 0, 1)",
+					showText:"no",
+					textOffset:10,
+					showThumbnailBoxShadow:"yes",
+					thumbnailBoxShadowCss:"0px 2px 2px #111111",
+					showTooltip:"no",
+					dynamicTooltip:"yes",
+					showReflection:"yes",
+					reflectionHeight:60,
+					reflectionDistance:0,
+					reflectionOpacity:.4,
+												
+					//controls settings
+					slideshowDelay:5000,
+					autoplay:"yes",
+					disableNextAndPrevButtonsOnMobile:"no",
+					controlsMaxWidth:700,
+					slideshowTimerColor:"#FFFFFF",
+					controlsPosition:"bottom",
+					controlsOffset:15,
+					showPrevButton:"yes",
+					showNextButton:"yes",
+					showSlideshowButton:"yes",
+					showScrollbar:"yes",
+					disableScrollbarOnMobile:"yes",
+					enableMouseWheelScroll:"no",
+					scrollbarHandlerWidth:200,
+					scrollbarTextColorNormal:"#000000",
+					scrollbarTextColorSelected:"#FFFFFF",
+					addKeyboardSupport:"yes",
+												
+					//categories settings
+					showCategoriesMenu:"no",
+					startAtCategory:1,
+					categoriesMenuMaxWidth:700,
+					categoriesMenuOffset:25,
+					categoryColorNormal:"#999999",
+					categoryColorSelected:"#FFFFFF",
+												
+					//lightbox settings
+					addLightBoxKeyboardSupport:"yes",
+					showLightBoxNextAndPrevButtons:"yes",
+					showLightBoxZoomButton:"yes",
+					showLightBoxInfoButton:"yes",
+					showLightBoxSlideShowButton:"yes",
+					showLightBoxInfoWindowByDefault:"no",
+					slideShowAutoPlay:"no",
+					lightBoxVideoAutoPlay:"no",
+					lightBoxVideoWidth:640,
+					lightBoxVideoHeight:480,
+					lightBoxIframeWidth:800,
+					lightBoxIframeHeight:600,
+					lightBoxBackgroundColor:"#000000",
+					lightBoxInfoWindowBackgroundColor:"#FFFFFF",
+					lightBoxItemBorderColor1:"#fcfdfd",
+					lightBoxItemBorderColor2:"#e4FFe4",
+					lightBoxItemBackgroundColor:"#333333",
+					lightBoxMainBackgroundOpacity:.8,
+					lightBoxInfoWindowBackgroundOpacity:.9,
+					lightBoxBorderSize:0,
+					lightBoxBorderRadius:0,
+					lightBoxSlideShowDelay:4000
+				});
+			}
+		</script>
+    </head>
+    <body>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=435684009949835";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+<!--        <div class="back-image"></div>-->
+
+<!--
+		<div class="preloader" style="width: 100%; height: 100%; position: fixed; top: 0px; background: lightgrey; z-index: 5000;">
+				<img src="menu/330.GIF" style="position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto;">
+		</div>
+-->
+
+        <div class="webpage-holder">
+<!--
+            <div class="header-container">
+				<img src="img/phtotwale.png" class="logo">
+				<div class="social-media-container">
+                    <a href="http://www.pinterest.com/thephotowale"><img src="social-media/pinterest.png" class="social-media"></a>
+                    <a href="http://www.plus.google.com/thephotowale"><img src="social-media/gPlus.png" class="social-media"></a>
+                    <a href="http://www.instagram.com/thephotowale"><img src="social-media/instagram.png" class="social-media"></a>
+                    <a href="http://www.twitter.com/thephotowale"><img src="social-media/twitter.png" class="social-media"></a>
+                    <a href="http://www.facebook.com/thephotowale"><img src="social-media/fb.png" class="social-media"></a>
+				</div>
+			</div>
+-->
+		    <div class="menu-container">
+                <div class="logo-container"><img class="logo" src="menu/logo.png"></div>
+                <img class="home1 home-menu menu default" src="menu/home1.png">
+				<img class="gallery1 gallery-menu menu default" src="menu/gallery1.png">
+				<img class="about1 about-us-menu menu default" src="menu/about1.png">
+				<img class="contact1 contact-us-menu menu default" src="menu/contact1.png">
+            </div> 
+            
+			<!-- div used as a holder for the coverflow -->
+			<div id="myDiv"></div>
+			
+			<!-- thumbnails holder -->
+			<div id="mainThumbsHolder" style="display:none;">
+				<p id="examples">Examples:</p>
+				<div id="thumbsHolder"></div>
+			</div>
+			
+			<!-- coverflow data -->
+		<ul id="playList1" style="display: none;">
+			
+			<!-- category  -->
+			<ul data-cat="+ Category one">
+				<ul>
+					<li data-type="media" data-url="load/images/01.jpg"></li>
+					<li data-thumbnail-path="load/thumbnails/01.jpg" data-thumbnail-width="500" data-thumbnail-height="294"></li>
+					<!-- <li data-thumbnail-text="">
+						<p class="largeLabel">CUSTOM PRESS THUMBNAIL ACTION</p>
+						<p class="smallLabel">When a thumbnail is pressed the coverflow can open a browser window or the lightbox.</p>
+					</li> -->
+					<!-- <li data-info="">
+						<p class="mediaDescriptionHeader">CUSTOM PRESS THUMBNAIL ACTION.</p>
+						<p class="mediaDescriptionText">When a thumbnail is pressed the coverflow can open a browser window or the lightbox.</p>
+					</li> -->
+				</ul>
+			
+				<ul>
+					<li data-type="media" data-url="load/images/02.jpg"></li>
+					<li data-thumbnail-path="load/thumbnails/02.jpg"></li>
+				</ul>
+				
+				<ul>
+					<li data-type="media" data-url="load/images/03.jpg"></li>
+					<li data-thumbnail-path="load/thumbnails/03.jpg"></li>
+				</ul>
+				
+				<ul>
+					<li data-type="media" data-url="load/images/04.jpg"></li>
+					<li data-thumbnail-path="load/thumbnails/04.jpg"></li>
+				</ul>
+
+				<ul>
+					<li data-type="media" data-url="load/images/05.jpg"></li>
+					<li data-thumbnail-path="load/thumbnails/05.jpg" data-thumbnail-width="247" data-thumbnail-height="370"></li>
+				</ul>
+				<ul>
+					<li data-type="media" data-url="load/images/06.jpg"></li>
+					<li data-thumbnail-path="load/thumbnails/06.jpg"></li>
+					
+				</ul>
+				<ul>
+					<li data-type="media" data-url="load/images/07.jpg"></li>
+					<li data-thumbnail-path="load/thumbnails/07.jpg"></li>
+				</ul>
+				<ul>
+					<li data-type="media" data-url="load/images/09.jpg"></li>
+					<li data-thumbnail-path="load/thumbnails/09.jpg"></li>
+				</ul>
+				<ul>
+					<li data-type="media" data-url="load/images/10.jpg"></li>
+					<li data-thumbnail-path="load/thumbnails/10.jpg"></li>
+				</ul>
+				<ul>
+					<li data-type="media" data-url="load/images/11.JPG"></li>
+					<li data-thumbnail-path="load/thumbnails/11.JPG" data-thumbnail-width="247" data-thumbnail-height="370"></li>
+				</ul>
+				<ul>
+					<li data-type="media" data-url="load/images/12.jpg"></li>
+					<li data-thumbnail-path="load/thumbnails/12.jpg"></li>
+				</ul>
+				<ul>
+					<li data-type="media" data-url="load/images/13.jpg"></li>
+					<li data-thumbnail-path="load/thumbnails/13.jpg"></li>
+				</ul>
+				<ul>
+					<li data-type="media" data-url="load/images/14.jpg"></li>
+					<li data-thumbnail-path="load/thumbnails/14.jpg" data-thumbnail-width="247" data-thumbnail-height="370"></li>
+				</ul>
+				<ul>
+					<li data-type="media" data-url="load/images/15.jpg"></li>
+					<li data-thumbnail-path="load/thumbnails/15.jpg"></li>
+				</ul>
+				<ul>
+					<li data-type="media" data-url="load/images/16.JPG"></li>
+					<li data-thumbnail-path="load/thumbnails/16.JPG" data-thumbnail-width="247" data-thumbnail-height="370"></li>
+				</ul>
+				<ul>
+					<li data-type="media" data-url="load/images/17.JPG"></li>
+					<li data-thumbnail-path="load/thumbnails/17.JPG"></li>
+				</ul>
+				<ul>
+					<li data-type="media" data-url="load/images/18.JPG"></li>
+					<li data-thumbnail-path="load/thumbnails/18.JPG"></li>
+				</ul>
+				<ul>
+					<li data-type="media" data-url="load/images/19.JPG"></li>
+					<li data-thumbnail-path="load/thumbnails/19.JPG"></li>
+				</ul>
+				<ul>
+					<li data-type="media" data-url="load/images/20.JPG"></li>
+					<li data-thumbnail-path="load/thumbnails/20.JPG"></li>
+				</ul>
+			</ul>
+			<!-- end  -->
+			
+			<!-- category  -->
+			<ul data-cat="+ Category two">
+				<ul>
+					<li data-type="link" data-url="http://www.google.com" data-target="_blank"></li>
+					<li data-thumbnail-path="load/thumbnails/1.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">CUSTOM PRESS THUMBNAIL ACTION</p>
+						<p class="smallLabel">When a thumbnail is pressed the coverflow can open a browser window or the lightbox.</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">CUSTOM PRESS THUMBNAIL ACTION.</p>
+						<p class="mediaDescriptionText">When a thumbnail is pressed the coverflow can open a browser window or the lightbox.</p>
+					</li>
+				</ul>
+			
+				<ul>
+					<li data-type="media" data-url="load/images/2.jpg"></li>
+					<li data-thumbnail-path="load/thumbnails/2.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">RESPONSIVE LAYOUT</p>
+						<p class="smallLabel">The coverflow has responsive layout.</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">RESPONSIVE LAYOUT.</p>
+						<p class="mediaDescriptionText">The coverflow has responsive layout, basically it has an adaptable layout which makes it the perfect candidate for any type of project.</p>
+					</li>
+				</ul>
+				
+				<ul>
+					<li data-type="media" data-url="http://vimeo.com/83759300"></li>
+					<li data-thumbnail-path="load/thumbnails/3.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">2D FALLBACK FOR OLDER BROWSERS LIKE IE7/8</p>
+						<p class="smallLabel">On a older browser that does not have 3D support the coverflow will display in a 2D format.</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">2D FALLBACK FOR OLDER BROWSERS LIKE IE7/8.</p>
+						<p class="mediaDescriptionText">On a older browser that does not have 3D support the coverflow will display in a 2D format..</p>
+					</li>
+				</ul>
+				
+				<ul>
+					<li data-type="link" data-url="http://www.google.com" data-target="_blank"></li>
+					<li data-thumbnail-path="load/thumbnails/4.jpg"></li>
+						<li data-thumbnail-text="">
+						<p class="largeLabel">GREAT PERFORMANCE ON MOBILE DEVICES</p>
+						<p class="smallLabel">This coverflow is using the GPU (hardware acceleration).</p>
+					</li>
+				</ul>
+
+				<ul>
+					<li data-type="media" data-url="http://www.youtube.com/watch?v=89rnIwCURC8"></li>
+					<li data-thumbnail-path="load/thumbnails/5.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">VIMEO AND YOUTUBE SUPPORT</p>
+						<p class="smallLabel">The coverflow lightbox can load and play videos from youtube or vimeo easely.</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">VIMEO AND YOUTUBE SUPPORT.</p>
+						<p class="mediaDescriptionText">All you have to do is to include the link from YouTube or Vimeo video that you want to display and the lightbox will display and play your video. The size (width and height) of each video can be set easily.</p>
+					</li>
+				</ul>
+
+				<ul>
+					<li data-type="iframe" data-url="http://www.bing.com/"></li>
+					<li data-thumbnail-path="load/thumbnails/6.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">IFRAME SUPPORT!</p>
+						<p class="smallLabel">The lightbox can load a HTML page and display it with ease.</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">IFRAME SUPPORT!</p>
+						<p class="mediaDescriptionText">The lightbox can load a HTML page and display it with ease. All you have to do is to include the link of the HTML page and the lightbox will display it. The HTML page size (width and height) can be easily set.</p>
+					</li>
+				</ul>
+				
+				<ul>
+					<li data-type="media" data-url="load/images/7.jpg"></li>
+					<li data-thumbnail-path="load/thumbnails/7.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">CUSTOMIZABLE SKIN AND COLOR THEME</p>
+						<p class="smallLabel">The entire color theme can be modified, and also the skin can be replaced with your own.</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">CUSTOMIZABLE SKIN AND COLOR THEME.</p>
+						<p class="mediaDescriptionText">The entire color theme can be modified, and also the skin can be replaced with your own.</p>
+					</li>
+				</ul>
+				
+				<ul>
+					<li data-type="link" data-url="http://www.google.com" data-target="_blank"></li>
+					<li data-thumbnail-path="load/thumbnails/8.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">CUSTOM TEXT FORMATTED WITH CSS.</p>
+						<p class="smallLabel">Full css support, the text which appear over the thumbnail can be formatted  with CSS.</p>
+					</li>
+				</ul>
+				
+				<ul>
+					<li data-type="media" data-url="load/images/9.jpg"></li>
+					<li data-thumbnail-path="load/thumbnails/9.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">THUMBNAILS DESCRIPTION</p>
+						<p class="smallLabel">Each thumbnail can have a short description that is visible when the mouse is over a thumbnail.</p>
+					</li>
+					<li data-info>
+						<p class="mediaDescriptionHeader">THUMBNAILS DESCRIPTION.</p>
+						<p class="mediaDescriptionText">Each thumbnail can have a short description, the text and background can be formatted with CSS.</p>
+					</li>
+				</ul>
+				
+				<ul>
+					<li data-type="link" data-url="http://www.google.com" data-target="_blank"></li>
+					<li data-thumbnail-path="load/thumbnails/10.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">CUSTOM PRESS THUMBNAIL ACTION</p>
+						<p class="smallLabel">When a thumbnail is pressed the coverflow can open a browser window or the lightbox.</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">CUSTOM PRESS THUMBNAIL ACTION.</p>
+						<p class="mediaDescriptionText">When a thumbnail is pressed the coverflow can open a browser window or the lightbox.</p>
+					</li>
+				</ul>
+				
+				<ul>
+					<li data-type="media" data-url="http://vimeo.com/83759300"></li>
+					<li data-thumbnail-path="load/thumbnails/11.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">VIMEO AND YOUTUBE SUPPORT</p>
+						<p class="smallLabel">The coverflow lightbox can load and play videos from youtube or vimeo easely.</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">VIMEO AND YOUTUBE SUPPORT.</p>
+						<p class="mediaDescriptionText">All you have to do is to include the link from YouTube or Vimeo video that you want to display and the lightbox will display and play your video. The size (width and height) of each video can be set easily.</p>
+					</li>
+				</ul>
+				
+				<ul>
+					<li data-type="link" data-url="http://www.google.com" data-target="_blank"></li>
+					<li data-thumbnail-path="load/thumbnails/4.jpg"></li>
+						<li data-thumbnail-text="">
+						<p class="largeLabel">GREAT PERFORMANCE ON MOBILE DEVICES</p>
+						<p class="smallLabel">This coverflow is using the GPU (hardware acceleration).</p>
+					</li>
+				</ul>
+
+				<ul>
+					<li data-type="media" data-url="http://www.youtube.com/watch?v=89rnIwCURC8"></li>
+					<li data-thumbnail-path="load/thumbnails/5.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">VIMEO AND YOUTUBE SUPPORT</p>
+						<p class="smallLabel">The coverflow lightbox can load and play videos from youtube or vimeo easely.</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">VIMEO AND YOUTUBE SUPPORT.</p>
+						<p class="mediaDescriptionText">All you have to do is to include the link from YouTube or Vimeo video that you want to display and the lightbox will display and play your video. The size (width and height) of each video can be set easily.</p>
+					</li>
+				</ul>
+				
+				<ul>
+					<li data-type="link" data-url="http://www.google.com" data-target="_blank"></li>
+					<li data-thumbnail-path="load/thumbnails/12.jpg"></li>
+						<li data-thumbnail-text="">
+						<p class="largeLabel">GREAT PERFORMANCE ON MOBILE DEVICES</p>
+						<p class="smallLabel">This coverflow is using the GPU (hardware acceleration).</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">GREAT PERFORMANCE ON MOBILE DEVICES.</p>
+						<p class="mediaDescriptionText">This coverflow is using the GPU (hardware acceleration), the rendering speed and performance are impeccable on desktop computers and most importantly on mobile devices.</p>
+					</li>
+				</ul>
+				
+				<ul>
+					<li data-type="media" data-url="load/images/13.jpg"></li>
+					<li data-thumbnail-path="load/thumbnails/13.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">ZOOM AND PANNING SUPPORT FOR IMAGES</p>
+						<p class="smallLabel">You can zoom in and out an image and you can pan the image,  in this way you can see the image in great detail (optional).</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">ZOOM AND PANNING SUPPORT FOR IMAGES.</p>
+						<p class="mediaDescriptionText">You can zoom in and out an image and you can pan the image,  in this way you can see the image in great detail (optional).</p>
+					</li>
+				</ul>
+				
+			</ul>
+			<!-- end  -->
+			
+			<!-- image datalist category  -->
+			<ul data-cat="+ Category three">
+				<ul>
+					<li data-type="link" data-url="http://www.google.com" data-target="_blank"></li>
+					<li data-thumbnail-path="load/thumbnails/1.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">CUSTOM PRESS THUMBNAIL ACTION</p>
+						<p class="smallLabel">When a thumbnail is pressed the coverflow can open a browser window or the lightbox.</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">CUSTOM PRESS THUMBNAIL ACTION.</p>
+						<p class="mediaDescriptionText">When a thumbnail is pressed the coverflow can open a browser window or the lightbox.</p>
+					</li>
+				</ul>
+				
+				<ul>
+					<li data-type="media" data-url="http://www.youtube.com/watch?v=89rnIwCURC8"></li>
+					<li data-thumbnail-path="load/thumbnails/5.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">VIMEO AND YOUTUBE SUPPORT</p>
+						<p class="smallLabel">The coverflow lightbox can load and play videos from youtube or vimeo easely.</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">VIMEO AND YOUTUBE SUPPORT.</p>
+						<p class="mediaDescriptionText">All you have to do is to include the link from YouTube or Vimeo video that you want to display and the lightbox will display and play your video. The size (width and height) of each video can be set easily.</p>
+					</li>
+				</ul>
+			
+				<ul>
+					<li data-type="media" data-url="load/images/2.jpg"></li>
+					<li data-thumbnail-path="load/thumbnails/2.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">RESPONSIVE LAYOUT</p>
+						<p class="smallLabel">The coverflow has responsive layout.</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">RESPONSIVE LAYOUT.</p>
+						<p class="mediaDescriptionText">The coverflow has responsive layout, basically it has an adaptable layout which makes it the perfect candidate for any type of project.</p>
+					</li>
+				</ul>
+				
+				<ul>
+					<li data-type="link" data-url="http://www.google.com" data-target="_blank"></li>
+					<li data-thumbnail-path="load/thumbnails/12.jpg"></li>
+						<li data-thumbnail-text="">
+						<p class="largeLabel">GREAT PERFORMANCE ON MOBILE DEVICES</p>
+						<p class="smallLabel">This coverflow is using the GPU (hardware acceleration).</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">GREAT PERFORMANCE ON MOBILE DEVICES.</p>
+						<p class="mediaDescriptionText">This coverflow is using the GPU (hardware acceleration), the rendering speed and performance are impeccable on desktop computers and most importantly on mobile devices.</p>
+					</li>
+				</ul>
+				
+				<ul>
+					<li data-type="media" data-url="load/images/13.jpg"></li>
+					<li data-thumbnail-path="load/thumbnails/13.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">ZOOM AND PANNING SUPPORT FOR IMAGES</p>
+						<p class="smallLabel">You can zoom in and out an image and you can pan the image,  in this way you can see the image in great detail (optional).</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">ZOOM AND PANNING SUPPORT FOR IMAGES.</p>
+						<p class="mediaDescriptionText">You can zoom in and out an image and you can pan the image,  in this way you can see the image in great detail (optional).</p>
+					</li>
+				</ul>
+				
+				<ul>
+					<li data-type="media" data-url="http://vimeo.com/83759300"></li>
+					<li data-thumbnail-path="load/thumbnails/3.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">2D FALLBACK FOR OLDER BROWSERS LIKE IE7/8</p>
+						<p class="smallLabel">On a older browser that does not have 3D support the coverflow will display in a 2D format.</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">2D FALLBACK FOR OLDER BROWSERS LIKE IE7/8.</p>
+						<p class="mediaDescriptionText">On a older browser that does not have 3D support the coverflow will display in a 2D format..</p>
+					</li>
+				</ul>
+				
+				<ul>
+					<li data-type="link" data-url="http://www.google.com" data-target="_blank"></li>
+					<li data-thumbnail-path="load/thumbnails/4.jpg"></li>
+						<li data-thumbnail-text="">
+						<p class="largeLabel">GREAT PERFORMANCE ON MOBILE DEVICES</p>
+						<p class="smallLabel">This coverflow is using the GPU (hardware acceleration).</p>
+					</li>
+				</ul>
+
+				<ul>
+					<li data-type="media" data-url="http://www.youtube.com/watch?v=89rnIwCURC8"></li>
+					<li data-thumbnail-path="load/thumbnails/5.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">VIMEO AND YOUTUBE SUPPORT</p>
+						<p class="smallLabel">The coverflow lightbox can load and play videos from youtube or vimeo easely.</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">VIMEO AND YOUTUBE SUPPORT.</p>
+						<p class="mediaDescriptionText">All you have to do is to include the link from YouTube or Vimeo video that you want to display and the lightbox will display and play your video. The size (width and height) of each video can be set easily.</p>
+					</li>
+				</ul>
+
+				<ul>
+					<li data-type="iframe" data-url="http://www.bing.com/"></li>
+					<li data-thumbnail-path="load/thumbnails/6.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">IFRAME SUPPORT!</p>
+						<p class="smallLabel">The lightbox can load a HTML page and display it with ease.</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">IFRAME SUPPORT!</p>
+						<p class="mediaDescriptionText">The lightbox can load a HTML page and display it with ease. All you have to do is to include the link of the HTML page and the lightbox will display it. The HTML page size (width and height) can be easily set.</p>
+					</li>
+				</ul>
+				
+				<ul>
+					<li data-type="media" data-url="load/images/7.jpg"></li>
+					<li data-thumbnail-path="load/thumbnails/7.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">CUSTOMIZABLE SKIN AND COLOR THEME</p>
+						<p class="smallLabel">The entire color theme can be modified, and also the skin can be replaced with your own.</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">CUSTOMIZABLE SKIN AND COLOR THEME.</p>
+						<p class="mediaDescriptionText">The entire color theme can be modified, and also the skin can be replaced with your own.</p>
+					</li>
+				</ul>
+				
+				<ul>
+					<li data-type="link" data-url="http://www.google.com" data-target="_blank"></li>
+					<li data-thumbnail-path="load/thumbnails/8.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">CUSTOM TEXT FORMATTED WITH CSS.</p>
+						<p class="smallLabel">Full css support, the text which appear over the thumbnail can be formatted  with CSS.</p>
+					</li>
+				</ul>
+				
+				<ul>
+					<li data-type="media" data-url="load/images/9.jpg"></li>
+					<li data-thumbnail-path="load/thumbnails/9.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">THUMBNAILS DESCRIPTION</p>
+						<p class="smallLabel">Each thumbnail can have a short description that is visible when the mouse is over a thumbnail.</p>
+					</li>
+					<li data-info>
+						<p class="mediaDescriptionHeader">THUMBNAILS DESCRIPTION.</p>
+						<p class="mediaDescriptionText">Each thumbnail can have a short description, the text and background can be formatted with CSS.</p>
+					</li>
+				</ul>
+				
+				<ul>
+					<li data-type="link" data-url="http://www.google.com" data-target="_blank"></li>
+					<li data-thumbnail-path="load/thumbnails/10.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">CUSTOM PRESS THUMBNAIL ACTION</p>
+						<p class="smallLabel">When a thumbnail is pressed the coverflow can open a browser window or the lightbox.</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">CUSTOM PRESS THUMBNAIL ACTION.</p>
+						<p class="mediaDescriptionText">When a thumbnail is pressed the coverflow can open a browser window or the lightbox.</p>
+					</li>
+				</ul>
+				
+				<ul>
+					<li data-type="media" data-url="http://vimeo.com/83759300"></li>
+					<li data-thumbnail-path="load/thumbnails/11.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">VIMEO AND YOUTUBE SUPPORT</p>
+						<p class="smallLabel">The coverflow lightbox can load and play videos from youtube or vimeo easely.</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">VIMEO AND YOUTUBE SUPPORT.</p>
+						<p class="mediaDescriptionText">All you have to do is to include the link from YouTube or Vimeo video that you want to display and the lightbox will display and play your video. The size (width and height) of each video can be set easily.</p>
+					</li>
+				</ul>
+				
+				<ul>
+					<li data-type="link" data-url="http://www.google.com" data-target="_blank"></li>
+					<li data-thumbnail-path="load/thumbnails/4.jpg"></li>
+						<li data-thumbnail-text="">
+						<p class="largeLabel">GREAT PERFORMANCE ON MOBILE DEVICES</p>
+						<p class="smallLabel">This coverflow is using the GPU (hardware acceleration).</p>
+					</li>
+				</ul>
+
+				<ul>
+					<li data-type="media" data-url="http://www.youtube.com/watch?v=89rnIwCURC8"></li>
+					<li data-thumbnail-path="load/thumbnails/5.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">VIMEO AND YOUTUBE SUPPORT</p>
+						<p class="smallLabel">The coverflow lightbox can load and play videos from youtube or vimeo easely.</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">VIMEO AND YOUTUBE SUPPORT.</p>
+						<p class="mediaDescriptionText">All you have to do is to include the link from YouTube or Vimeo video that you want to display and the lightbox will display and play your video. The size (width and height) of each video can be set easily.</p>
+					</li>
+				</ul>
+				
+				<ul>
+					<li data-type="link" data-url="http://www.google.com" data-target="_blank"></li>
+					<li data-thumbnail-path="load/thumbnails/12.jpg"></li>
+						<li data-thumbnail-text="">
+						<p class="largeLabel">GREAT PERFORMANCE ON MOBILE DEVICES</p>
+						<p class="smallLabel">This coverflow is using the GPU (hardware acceleration).</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">GREAT PERFORMANCE ON MOBILE DEVICES.</p>
+						<p class="mediaDescriptionText">This coverflow is using the GPU (hardware acceleration), the rendering speed and performance are impeccable on desktop computers and most importantly on mobile devices.</p>
+					</li>
+				</ul>
+				
+				<ul>
+					<li data-type="media" data-url="load/images/13.jpg"></li>
+					<li data-thumbnail-path="load/thumbnails/13.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">ZOOM AND PANNING SUPPORT FOR IMAGES</p>
+						<p class="smallLabel">You can zoom in and out an image and you can pan the image,  in this way you can see the image in great detail (optional).</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">ZOOM AND PANNING SUPPORT FOR IMAGES.</p>
+						<p class="mediaDescriptionText">You can zoom in and out an image and you can pan the image,  in this way you can see the image in great detail (optional).</p>
+					</li>
+				</ul>
+				
+			</ul>
+			<!-- end -->
+			
+		</ul>
+		
+		<!-- coverflow data -->
+		<ul id="playList2SingleCat" style="display: none;">
+			
+			<!-- category  -->
+			<ul data-cat="Category one">
+				<ul>
+					<li data-type="link" data-url="http://www.google.com" data-target="_blank"></li>
+					<li data-thumbnail-path="load/thumbnails/1.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">CUSTOM PRESS THUMBNAIL ACTION</p>
+						<p class="smallLabel">When a thumbnail is pressed the coverflow can open a browser window or the lightbox.</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">CUSTOM PRESS THUMBNAIL ACTION.</p>
+						<p class="mediaDescriptionText">When a thumbnail is pressed the coverflow can open a browser window or the lightbox.</p>
+					</li>
+				</ul>
+			
+				<ul>
+					<li data-type="media" data-url="load/images/2.jpg"></li>
+					<li data-thumbnail-path="load/thumbnails/2.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">RESPONSIVE LAYOUT</p>
+						<p class="smallLabel">The coverflow has responsive layout.</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">RESPONSIVE LAYOUT.</p>
+						<p class="mediaDescriptionText">The coverflow has responsive layout, basically it has an adaptable layout which makes it the perfect candidate for any type of project.</p>
+					</li>
+				</ul>
+				
+				<ul>
+					<li data-type="media" data-url="http://vimeo.com/83759300"></li>
+					<li data-thumbnail-path="load/thumbnails/3.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">2D FALLBACK FOR OLDER BROWSERS LIKE IE7/8</p>
+						<p class="smallLabel">On a older browser that does not have 3D support the coverflow will display in a 2D format.</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">2D FALLBACK FOR OLDER BROWSERS LIKE IE7/8.</p>
+						<p class="mediaDescriptionText">On a older browser that does not have 3D support the coverflow will display in a 2D format..</p>
+					</li>
+				</ul>
+				
+				<ul>
+					<li data-type="link" data-url="http://www.google.com" data-target="_blank"></li>
+					<li data-thumbnail-path="load/thumbnails/4.jpg"></li>
+						<li data-thumbnail-text="">
+						<p class="largeLabel">GREAT PERFORMANCE ON MOBILE DEVICES</p>
+						<p class="smallLabel">This coverflow is using the GPU (hardware acceleration).</p>
+					</li>
+				</ul>
+
+				<ul>
+					<li data-type="media" data-url="http://www.youtube.com/watch?v=89rnIwCURC8"></li>
+					<li data-thumbnail-path="load/thumbnails/5.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">VIMEO AND YOUTUBE SUPPORT</p>
+						<p class="smallLabel">The coverflow lightbox can load and play videos from youtube or vimeo easely.</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">VIMEO AND YOUTUBE SUPPORT.</p>
+						<p class="mediaDescriptionText">All you have to do is to include the link from YouTube or Vimeo video that you want to display and the lightbox will display and play your video. The size (width and height) of each video can be set easily.</p>
+					</li>
+				</ul>
+
+				<ul>
+					<li data-type="iframe" data-url="http://www.bing.com/"></li>
+					<li data-thumbnail-path="load/thumbnails/6.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">IFRAME SUPPORT!</p>
+						<p class="smallLabel">The lightbox can load a HTML page and display it with ease.</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">IFRAME SUPPORT!</p>
+						<p class="mediaDescriptionText">The lightbox can load a HTML page and display it with ease. All you have to do is to include the link of the HTML page and the lightbox will display it. The HTML page size (width and height) can be easily set.</p>
+					</li>
+				</ul>
+				
+				<ul>
+					<li data-type="media" data-url="load/images/7.jpg"></li>
+					<li data-thumbnail-path="load/thumbnails/7.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">CUSTOMIZABLE SKIN AND COLOR THEME</p>
+						<p class="smallLabel">The entire color theme can be modified, and also the skin can be replaced with your own.</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">CUSTOMIZABLE SKIN AND COLOR THEME.</p>
+						<p class="mediaDescriptionText">The entire color theme can be modified, and also the skin can be replaced with your own.</p>
+					</li>
+				</ul>
+				
+				<ul>
+					<li data-type="link" data-url="http://www.google.com" data-target="_blank"></li>
+					<li data-thumbnail-path="load/thumbnails/8.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">CUSTOM TEXT FORMATTED WITH CSS.</p>
+						<p class="smallLabel">Full css support, the text which appear over the thumbnail can be formatted  with CSS.</p>
+					</li>
+				</ul>
+				
+				<ul>
+					<li data-type="media" data-url="load/images/9.jpg"></li>
+					<li data-thumbnail-path="load/thumbnails/9.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">THUMBNAILS DESCRIPTION</p>
+						<p class="smallLabel">Each thumbnail can have a short description that is visible when the mouse is over a thumbnail.</p>
+					</li>
+					<li data-info>
+						<p class="mediaDescriptionHeader">THUMBNAILS DESCRIPTION.</p>
+						<p class="mediaDescriptionText">Each thumbnail can have a short description, the text and background can be formatted with CSS.</p>
+					</li>
+				</ul>
+				
+				<ul>
+					<li data-type="link" data-url="http://www.google.com" data-target="_blank"></li>
+					<li data-thumbnail-path="load/thumbnails/10.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">CUSTOM PRESS THUMBNAIL ACTION</p>
+						<p class="smallLabel">When a thumbnail is pressed the coverflow can open a browser window or the lightbox.</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">CUSTOM PRESS THUMBNAIL ACTION.</p>
+						<p class="mediaDescriptionText">When a thumbnail is pressed the coverflow can open a browser window or the lightbox.</p>
+					</li>
+				</ul>
+				
+				<ul>
+					<li data-type="media" data-url="http://vimeo.com/83759300"></li>
+					<li data-thumbnail-path="load/thumbnails/11.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">VIMEO AND YOUTUBE SUPPORT</p>
+						<p class="smallLabel">The coverflow lightbox can load and play videos from youtube or vimeo easely.</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">VIMEO AND YOUTUBE SUPPORT.</p>
+						<p class="mediaDescriptionText">All you have to do is to include the link from YouTube or Vimeo video that you want to display and the lightbox will display and play your video. The size (width and height) of each video can be set easily.</p>
+					</li>
+				</ul>
+				
+				<ul>
+					<li data-type="link" data-url="http://www.google.com" data-target="_blank"></li>
+					<li data-thumbnail-path="load/thumbnails/12.jpg"></li>
+						<li data-thumbnail-text="">
+						<p class="largeLabel">GREAT PERFORMANCE ON MOBILE DEVICES</p>
+						<p class="smallLabel">This coverflow is using the GPU (hardware acceleration).</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">GREAT PERFORMANCE ON MOBILE DEVICES.</p>
+						<p class="mediaDescriptionText">This coverflow is using the GPU (hardware acceleration), the rendering speed and performance are impeccable on desktop computers and most importantly on mobile devices.</p>
+					</li>
+				</ul>
+				
+				<ul>
+					<li data-type="media" data-url="load/images/13.jpg"></li>
+					<li data-thumbnail-path="load/thumbnails/13.jpg"></li>
+					<li data-thumbnail-text="">
+						<p class="largeLabel">ZOOM AND PANNING SUPPORT FOR IMAGES</p>
+						<p class="smallLabel">You can zoom in and out an image and you can pan the image,  in this way you can see the image in great detail (optional).</p>
+					</li>
+					<li data-info="">
+						<p class="mediaDescriptionHeader">ZOOM AND PANNING SUPPORT FOR IMAGES.</p>
+						<p class="mediaDescriptionText">You can zoom in and out an image and you can pan the image,  in this way you can see the image in great detail (optional).</p>
+					</li>
+				</ul>
+				
+			</ul>
+			<!-- end  -->
+			
+		</ul>
+                <div class="ht20" style="clear:both;height:35px;"></div>
+			
+			<div class="footer-container">
+                    <div class="social-media-container">
+                        <a href="http://www.pinterest.com/thephotowale"><span title="pinterest" class="icon-pinterest social-media"></span></a>
+                        <a href="http://www.plus.google.com/thephotowale"><span title="google+" class="icon-google__x2B_ social-media"></span></a>
+                        <a href="http://www.instagram.com/thephotowale"><span title="instagram" class="icon-instagram social-media"></span></a>
+                        <a href="http://www.twitter.com/thephotowale"><span title="twitter" class="icon-twitter-3 social-media"></span></a>
+                        <a href="http://www.facebook.com/thephotowale"><span title="facebook" class="icon-facebook social-media"></span></a>
+                    </div>
+                    <div class="site-info">
+                        <span>Email us at: info@thephotowale.com</span>
+                    </div>
+				<div class="fb-like" data-href="https://www.facebook.com/thephotowale" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
+                <div class="copyright-container">
+                    <span>All Content and Images &#169; 2015, the Photowale. All Rights Reserved.</span>
+                </div>                
+            </div>
+        </div>
+    </body>
+</html>
+
